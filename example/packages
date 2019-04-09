@@ -1,6 +1,4 @@
-chrony
-less
-logrotate
-openssh
-ssmtp
+dropbear
+docker
+open-vm-tools
 sudo
