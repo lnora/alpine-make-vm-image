@@ -8,7 +8,7 @@ step() {
 
 
 step 'Set up timezone'
-setup-timezone -z Europe/Prague
+setup-timezone -z Europe/Rome
 
 step 'Set up networking'
 cat > /etc/network/interfaces <<-EOF
@@ -26,9 +26,8 @@ sed -Ei \
 	/etc/rc.conf
 
 step 'Enable services'
-rc-update add acpid default
-rc-update add chronyd default
-rc-update add crond default
 rc-update add net.eth0 default
 rc-update add net.lo boot
-rc-update add termencoding boot
+rc-update add docker boot
+rc-update add dropbear boot
+rc-update add open-vm-tools boot
