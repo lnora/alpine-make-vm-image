@@ -7,8 +7,8 @@ addons:
       - qemu-utils
 script:
   - sudo ./alpine-make-vm-image
-        --image-format qcow2
-        --image-size 2G
+        --image-format vmdk
+        --image-size 20G
         --repositories-file example/repositories
         --packages "$(cat example/packages)"
         --script-chroot
